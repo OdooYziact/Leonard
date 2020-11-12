@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <!-- Add test field to existing view -->
+        <record model="ir.ui.view" id="product_template_inherit">
+            <field name="name">Licence</field>
+            <field name="model">product.product</field>
+            <field name="inherit_id" ref="product.product_template_inherit"/>
+            <field name="arch" type="xml">
+               <div class="oe_title">
+                        <label class="oe_edit_only" for="name" string="Product Name"/>
+                        <h1><field name="name" placeholder="Product Name"/></h1>
+                        <div name="options" groups="base.group_user">
+                            <div>
+                                <field name="licence_ok"/>
+                                <label for="licence_ok"/>
+                            </div>
+                        </div>
+                    </div>
+            </field>
+        </record>
+    </data>
+</odoo>
