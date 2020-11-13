@@ -4,4 +4,4 @@ from odoo import fields, models
 
 class ProductTemplate(models.Model):
     _inherit = 'product.template'
-    licence_ok = fields.Boolean('Is a Licence', default=False)
+    is_licence = fields.Boolean(related='product_tmpl_id.is_licence')
