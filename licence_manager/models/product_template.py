@@ -1,3 +1,5 @@
+from odoo import fields, models
+
 class ProductTemplate(models.Model):
     _name = "product.template"
     _inherit = ['mail.thread', 'mail.activity.mixin', 'image.mixin']
