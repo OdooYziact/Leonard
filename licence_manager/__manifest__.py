@@ -26,10 +26,10 @@
 
     # always loaded
     'data': [
-         'views/product_views.xml'
-        # 'views/views.xml',
-        # 'views/templates.xml',
-        # 'security/ir.model.access.csv',
+        'views/product_views.xml'
+        'views/views.xml',
+        'views/templates.xml',
+        'security/ir.model.access.csv',
     ],
     'installable': True,
 }
