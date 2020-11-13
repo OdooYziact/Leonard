@@ -10,7 +10,7 @@
                 <field name="is_licence" groups="base.group_user"/>
                 <div>
                     <field name="licence_ok"/>
-                                <label for="licence_ok"/>
+                    <label for="licence_ok"/>
                 </div>
             </xpath>
         </field>
