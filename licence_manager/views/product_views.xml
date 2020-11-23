@@ -8,10 +8,8 @@
             <field name="arch" type="xml">
                 <xpath expr="//field[@name='purchase_ok']" position="after">
                     <field name="name" placeholder="Product Name"/>
-                        <div name="purchase_ok" groups="base.group_user" position="after">
                             <field name="is_licence"/>
                             <label for="is_licence"/>
-                        </div>
                 </xpath>
             </field>
         </record>
