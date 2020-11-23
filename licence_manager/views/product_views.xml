@@ -9,6 +9,10 @@
             <xpath expr="//field[@name='purchase_ok']" position="after">
                 <field name="is_licence" groups="base.group_user"/>
             </xpath>
+            <div>
+                <field name="sale_ok"/>
+                <label for="sale_ok"/>
+            </div>
         </field>
     </record>
 </odoo>
