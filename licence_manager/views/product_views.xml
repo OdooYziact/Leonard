@@ -7,7 +7,7 @@
         <field name="arch" type="xml">
 
             <xpath expr="//field[@name='purchase_ok']" position="after">
-                <group name="oe_edit_only">
+                <group name="purchase_ok">
                     <field name="is_licence"/>
                     <label for="is_licence"/>
                 </group>
