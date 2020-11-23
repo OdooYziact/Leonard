@@ -22,12 +22,12 @@
     # any module necessary for this one to work correctly
     'depends': [
         'base',
-        'product'
+        'product',
     ],
 
     # always loaded
     'data': [
-        'views/product_views.xml'
+        'views/product_views.xml',
         #'views/views.xml',
         #'views/templates.xml',
         #'security/ir.model.access.csv',
