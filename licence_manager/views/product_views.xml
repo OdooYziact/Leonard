@@ -9,9 +9,11 @@
                 <xpath expr="//field[@name='purchase_ok']" position="after">
                         <div>
                             <field name="is_licence"/>
+                            <label for="is_licence"/>
                         </div>
                 </xpath>
             </field>
         </record>
     </data>
 </odoo>
+
