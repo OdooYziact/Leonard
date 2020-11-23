@@ -8,8 +8,7 @@
 
             <xpath expr="//field[@name='purchase_ok']" position="after">
                 <field name="is_licence" groups="base.group_user"/>
-            </xpath>
-             <div class="oe_title">
+                <div class="oe_title">
                         <label class="oe_edit_only" for="name" string="Product Name"/>
                         <h1><field name="name" placeholder="Product Name"/></h1>
                         <div name="options" groups="base.group_user">
@@ -17,6 +16,8 @@
                                 <field name="is_licence"/>
                                 <label for="is_licence"/>
                             </div>
+            </xpath>
+
         </field>
     </record>
 </odoo>
