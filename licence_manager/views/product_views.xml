@@ -8,7 +8,7 @@
             <field name="arch" type="xml">
                 <xpath expr="//field[@name='purchase_ok']" position="after">
                     <field name="name" placeholder="Product Name"/>
-                    <div name="purchase_ok">
+                    <div name="option">
                         <field name="is_licence"/>
                         <label for="is_licence"/>
                     </div>
