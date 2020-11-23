@@ -7,19 +7,9 @@
             <field name="inherit_id" ref="product.product_template_only_form_view"/>
             <field name="arch" type="xml">
                 <xpath expr="//field[@name='purchase_ok']" position="after">
-                     <div name="options" groups="base.group_user">
-                            <div>
-                                <field name="sale_ok"/>
-                                <label for="sale_ok"/>
-                            </div>
-                            <div>
-                                <field name="purchase_ok"/>
-                                <label for="purchase_ok"/>
-                            </div>
-                            <div>
-                                <field name="is_licence"/>
-                                <label for="is_licence"/>
-                            </div>
+                        <div>
+                            <field name="is_licence"/>
+                        </div>
                 </xpath>
             </field>
         </record>
