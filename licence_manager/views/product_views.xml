@@ -5,7 +5,7 @@
             <field name="name">product licence manager</field>
             <field name="model">product.product</field>
             <field name="inherit_id" ref="product.product_template_only_form_view"/>
-            <field name="inherit_id" ref="product.product_form_view"/>
+            <field name="inherit_id" ref="product_tmpl_id.is_licence"/>
             <field name="arch" type="xml">
                 <xpath expr="//field[@name='purchase_ok']" position="after">
                         <div>
