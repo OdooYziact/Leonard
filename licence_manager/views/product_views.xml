@@ -6,8 +6,8 @@
             <field name="model">product.template</field>
             <field name="inherit_id" ref="product.product_template_only_form_view"/>
             <field name="arch" type="xml">
+                <label class="oe_edit_only" for="name" string="Product Name"/>
                 <xpath expr="//field[@name='purchase_ok']" position="after">
-                    <label class="oe_edit_only" for="name" string="Product Name"/>
                     <div name="option" groups="base.group_user">
                         <div>
                             <field name="is_licence"/>
