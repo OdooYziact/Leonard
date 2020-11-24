@@ -7,7 +7,7 @@
             <field name="inherit_id" ref="product.product_template_only_form_view"/>
             <field name="arch" type="xml">
                 <xpath expr="//field[@name='option']" position="after">
-                    <group name="first" string="purchase_ok"/>
+                    <group name="option" string="purchase_ok"/>
                         <div>
                                 <field name="is_licence"/>
                                 <label for="is_licence"/>
@@ -22,7 +22,7 @@
             <field name="inherit_id" ref="product.product_normal_form_view"/>
             <field name="arch" type="xml">
                 <xpath expr="//field[@name='option']" position="after">
-                    <group name="first" string="purchase_ok"/>
+                    <group name="option" string="purchase_ok"/>
                         <div>
                                 <field name="is_licence"/>
                                 <label for="is_licence"/>
