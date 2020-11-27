@@ -1,5 +1,5 @@
 <odoo>
-    <record id="product_licence_tree" model="ir.ui.view">
+    <record id="product_licence_tree_custom" model="ir.ui.view">
         <field name="name">product.licence.tree</field>
         <field name="model">product.licence</field>
         <field name="arch" type="xml">
@@ -19,7 +19,7 @@
         <field name="res_model">product.licence</field>
         <field name="groups_id" eval="[(6, False, [ref('base.group_user')])]"/>
         <field name="view_mode">tree</field>
-        <field name="view_id" ref="licence_manager.product_licence_tree"/>
+        <field name="view_id" ref="licence_manager.product_licence_tree_custom"/>
     </record>
 
     <menuitem id="licence_manager_menu_licence"
