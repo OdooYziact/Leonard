@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <odoo>
-    <data>
+
         <record id="product_licence_tree" model="ir.ui.view">
             <field name="name">product.licence.tree</field>
             <field name="model">product.licence</field>
@@ -30,7 +30,7 @@
                   action="action_open_licence_manager"
                   sequence="10"
                   groups_id="base.group_user"/>
-    </data>
+
 </odoo>
 
 
