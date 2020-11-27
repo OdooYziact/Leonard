@@ -8,7 +8,7 @@
         </field>
     </record>
 
-    <record id="action_open_licence_manager" model="ir.actions.action_window">
+    <record id="action_open_licence_manager" model="ir.actions.act_window">
         <field name="name">licence.manager</field>
         <field name="type">ir.actions.act_window</field>
         <field name="res_model">product.licence</field>
