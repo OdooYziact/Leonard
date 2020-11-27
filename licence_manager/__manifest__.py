@@ -29,10 +29,10 @@
     # always loaded
     'data': [
         'views/product_views.xml',
-        'views/product_licence_views.xml',
+        #'views/product_licence_views.xml',
         #'views/views.xml',
         #'views/templates.xml',
-        'security/ir.model.access.csv',
+        #'security/ir.model.access.csv',
     ],
     'installable': True,
 }
