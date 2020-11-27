@@ -29,7 +29,7 @@
     # always loaded
     'data': [
         'views/product_views.xml',
-        #'views/product_licence.xml',
+        'views/product_licence.xml',
         #'views/views.xml',
         #'views/templates.xml',
         'security/ir.model.access.csv',
