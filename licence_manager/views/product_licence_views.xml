@@ -1,11 +1,10 @@
-<?xml version="1.0" encoding="utf-8"?>
 <odoo>
     <record id="product_licence_tree" model="ir.ui.view">
         <field name="name">product licence list</field>
         <field name="model">product.licence</field>
         <field name="arch" type="xml">
-            <tree string="Product" multi_edit="1">
-<!--            <tree string="Product" multi_edit="1" >-->
+            <tree string="Product">
+<!--            <tree string="Product" multi_edit="1">-->
                 <field name="product_id" optional="show"/>
                 <field name="customer_id" optional="show"/>
                 <field name="editor_id" optional="hide"/>
