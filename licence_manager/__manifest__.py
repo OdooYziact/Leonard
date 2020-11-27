@@ -23,6 +23,7 @@
     'depends': [
         'base',
         'product',
+        'stock',
     ],
 
     # always loaded
