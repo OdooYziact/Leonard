@@ -24,7 +24,7 @@
         <field name="view_id" eval="ref('licence_manager.product_licence_tree')"/>
     </record>
 
-    <menuitem id="menu_licence" name="Licence Manager" parent="stock.menu_stock_inventory_control" sequence="10" action="action_open_licence_manager"/>
+    <menuitem id="menu_licence" name="Licence Manager" parent="stock.menu_stock_inventory_control" sequence="10" action="action_open_licence_manager" groups_id="base.group_user"/>
 
 </odoo>
 
