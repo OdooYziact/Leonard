@@ -12,20 +12,4 @@
             </tree>
         </field>
     </record>
-
-    <record id="action_open_licence_manager" model="ir.actions.act_window">
-        <field name="name">licence.manager</field>
-        <field name="type">ir.actions.act_window</field>
-        <field name="res_model">product.licence</field>
-        <field name="groups_id" eval="[(6, False, [ref('base.group_user')])]"/>
-        <field name="view_mode">tree</field>
-        <field name="view_id" ref="licence_manager.product_licence_tree"/>
-    </record>
-    
-    <menuitem id="licence_manager_menu_licence"
-              name="Licence Manager"
-              parent="stock.menu_stock_inventory_control"
-              action="action_open_licence_manager"
-              sequence="10"
-              groups_id="base.group_user"/>
 </odoo>
