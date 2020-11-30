@@ -1,0 +1,15 @@
+<odoo>
+    <record id="product_licence_tree" model="ir.ui.view">
+        <field name="name">Licence Manager</field>
+        <field name="model">product.licence</field>
+        <field name="arch" type="xml">
+            <tree string="PRODUCTS">
+                <field name="product_id"/>
+                <field name="customer_id"/>
+                <field name="editor_id"/>
+                <field name="provider_id"/>
+                <field name="quantity"/>
+            </tree>
+        </field>
+    </record>
+</odoo>
