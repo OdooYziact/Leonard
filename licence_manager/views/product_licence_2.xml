@@ -26,5 +26,5 @@
               id="menu_licence"
               parent="stock.menu_stock_inventory_control"
               sequence="10"
-              groups="base.group_user"/>
+              groups="stock.group_stock_user"/>
 </odoo>
