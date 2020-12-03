@@ -1,6 +1,7 @@
 from odoo import api, models
 from pprint import pprint
 
+
 class SaleSubscription(models.Model):
     _inherit = "sale.subscription"
 
@@ -15,7 +16,7 @@ class SaleSubscription(models.Model):
         res = super(SaleSubscription, self).create(values)
         print(values)
         for line in self.recurring_invoice_line_ids:
-            if line.product_id == line.is_licence: #(== self.product_id:)
+            if line.product_id == line.is_licence:  # (== self.product_id:)
                 self.create.product.licence(values['product_id'], line.product_id, line.customer_id, line.quantity)
             pprint(values)
         return res
