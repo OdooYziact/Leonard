@@ -24,8 +24,7 @@
         'base',
         'product',
         'stock',
-        'sale',
-        'subscription',
+        'sale_subscription',
     ],
 
     # always loaded
