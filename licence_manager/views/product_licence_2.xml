@@ -4,6 +4,7 @@
         <field name="model">product.licence</field>
         <field name="arch" type="xml">
             <tree string="PRODUCTS">
+                <form create="0"/>
                 <field name="product_id"/>
                 <field name="customer_id"/>
                 <field name="editor_id"/>
