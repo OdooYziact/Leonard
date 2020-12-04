@@ -3,7 +3,7 @@
         <field name="name">Licence Manager</field>
         <field name="model">product.licence</field>
         <field name="arch" type="xml">
-            <tree string="PRODUCTS">
+            <tree create="0" string="PRODUCTS">
                 <form create="0"/>
                 <field name="product_id"/>
                 <field name="customer_id"/>
