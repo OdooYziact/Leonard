@@ -7,16 +7,14 @@ class SaleSubscription(models.Model):
 
     @api.model
     def create(self, values):
-        if values.get('product_id', False) and ('customer_id', False):
-            self.env['product.licence'].create({
-                'product_id':values['product_id'],
-                'customer_id':values['customer_id'],
-                'quantity': values['quantity'],
-            })
         res = super(SaleSubscription, self).create(values)
         print(values)
-        for line in self.recurring_invoice_line_ids:
-            if line.product_id == line.is_licence:  # (== self.product_id:)
-                self.create.product.licence(values['product_id'], line.product_id, line.customer_id, line.quantity)
-            pprint(values)
+        for line in values['recurring_invoice_line_ids']:
+            if line.product_id.is_lience:
+                self.env['product.licence'].create({
+                    'product_id': values['product_id'],
+                    'customer_id': values['customer_id'],
+                    'quantity': values['quantity'],
+                })
+        pprint(values)
         return res
