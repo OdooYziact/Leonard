@@ -1,5 +1,7 @@
 from odoo import api, models
-from pprint import pprint
+
+import logging
+_logger = logging.getLogger(__name__)
 
 
 class SaleSubscription(models.Model):
@@ -8,7 +10,7 @@ class SaleSubscription(models.Model):
     @api.model
     def create(self, values):
         res = super(SaleSubscription, self).create(values)
-        print(values)
+        _logger.info(values)
         for line in values['recurring_invoice_line_ids']:
             if line.product_id.is_lience:
                 self.env['product.licence'].create({
@@ -16,5 +18,4 @@ class SaleSubscription(models.Model):
                     'customer_id': values['customer_id'],
                     'quantity': values['quantity'],
                 })
-        pprint(values)
         return res
