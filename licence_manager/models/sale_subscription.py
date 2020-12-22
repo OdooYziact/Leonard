@@ -23,9 +23,9 @@ class SaleSubscription(models.Model):
 ################check_recovery_subscription_lines################
 
     @api.onchange('stage_id')
-    def onchange_check_is_licence(self, product, customer, quantity):
+    def onchange_check_is_licence(self):
         if self.stage_id.id == 2:
-            for line in self.reccuring_invoice_line:
+            for line in self.recurring_invoice_line_ids:
                 if line.product_id.is_lience:
                     self.env['product.licence'].create({
                         'product_id': int(product.id),
