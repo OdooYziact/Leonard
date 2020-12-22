@@ -1,4 +1,4 @@
-from odoo import api, models
+from odoo import api, models, fields
 
 import logging
 _logger = logging.getLogger(__name__)
@@ -19,3 +19,16 @@ class SaleSubscription(models.Model):
                     'quantity': values['quantity'],
                 })
         return res
+
+################check_recovery_subscription_lines################
+
+    @api.onchange('stage_id')
+    def onchange_check_is_licence(self, product, customer, quantity):
+        if self.stage_id.id == 2:
+            for line in self.reccuring_invoice_line:
+                if line.product_id.is_lience:
+                    self.env['product.licence'].create({
+                        'product_id': int(product.id),
+                        'customer_id': int(customer.id),
+                        'quantity': float(quantity),
+                    })
