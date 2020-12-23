@@ -14,6 +14,4 @@ class SaleSubscription(models.Model):
                 if product.product_id.is_licence:
                     self.env['product.licence'].create({
                         'product_id': product.id,
-                        'customer_id': customer.id,
-                        'quantity': quantity,
                     })
