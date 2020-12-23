@@ -12,7 +12,7 @@ class SaleSubscription(models.Model):
         res = super(SaleSubscription, self).create(values)
         _logger.info(values)
         for line in values['recurring_invoice_line_ids']:
-            if line.product_id.is_lience:
+            if line.product_id.is_licence:
                 self.env['product.licence'].create({
                     'product_id': values['product_id'],
                     'customer_id': values['customer_id'],
@@ -26,7 +26,7 @@ class SaleSubscription(models.Model):
     def onchange_check_is_licence(self):
         if self.stage_id.id == 2:
             for line in self.recurring_invoice_line_ids:
-                if line.product_id.is_lience:
+                if line.product_id.is_licence:
                     self.env['product.licence'].create({
                         'product_id': int(product.id),
                         'customer_id': int(customer.id),
