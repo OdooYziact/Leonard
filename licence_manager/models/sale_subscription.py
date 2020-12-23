@@ -10,11 +10,10 @@ class SaleSubscription(models.Model):
     @api.onchange('stage_id')
     def onchange_check_is_licence(self):
         if self.stage_id.id == 2:
-            for line in self.recurring_invoice_line_ids:
-                if line.product_id.is_licence:
+            for lines in self.recurring_invoice_line_ids:
+                if lines.product_id.is_licence in self.recurring_invoice_line_ids:
                     self.env['product.licence'].create({
                         'product_id': int(),
                         'customer_id': int(),
                         'quantity': float(),
                     })
-
