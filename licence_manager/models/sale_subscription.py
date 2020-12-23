@@ -12,7 +12,7 @@ class SaleSubscription(models.Model):
         if self.stage_id.id == 2:
             for sale_subscription_line in self.recurring_invoice_line_ids:
                 if sale_subscription_line.product_id.is_licence:
-                    self.env['product.licence'].create({
+                    self.env[product.licence].create({
                         'product_id': product.id,
                         'customer_id': int(),
                         'quantity': float(),
