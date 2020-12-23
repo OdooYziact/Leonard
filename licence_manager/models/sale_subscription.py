@@ -26,9 +26,11 @@ class SaleSubscription(models.Model):
     def onchange_check_is_licence(self):
         if self.stage_id.id == 2:
             for line in self.recurring_invoice_line_ids:
-                if line.product_id.is_lience:
+                if line.product.is_lience:
                     self.env['product.licence'].create({
                         'product_id': int(product.id),
                         'customer_id': int(customer.id),
                         'quantity': float(quantity),
                     })
+
+### Tu dois créer une ligne de product.licence en fonction de l'article de la ligne, du client de la ligne et de la quantité de la ligne.###
