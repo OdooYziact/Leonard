@@ -13,7 +13,7 @@ class SaleSubscription(models.Model):
             for sale_subscription_line in self.recurring_invoice_line_ids:
                 if sale_subscription_line.product_id.is_licence:
                     self.env['product.licence'].create({
-                        'product_id': str(self.product.id),
-                        'customer_id': str(self.customer.id),
-                        'quantity': float(self.quantity),
+                        'product_id': self.recurring_invoice_line_ids.product.id,
+                        'customer_id': self.recurring_invoice_line_ids.customer.id,
+                        'quantity': self.recurring_invoice_line_ids.quantity,
                     })
