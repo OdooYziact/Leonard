@@ -22,3 +22,5 @@ class SaleSubscription(models.Model):
 #Dans le for, customer_id est en realite parner_id qui se voit recuperer un id via company_id.
 #Creation d'abonnement comportant des licences + transfert d'informations dans mon tableau des le changement d'etat de
 # l'abonnement (onchange stage_id =2)
+#Observation : si dans les abonnement je decale tout dans "closed" cela ne se repercute pas dans mon tableau,
+# meme si je peux tout de meme les delete manuellement.
