@@ -14,7 +14,7 @@ class SaleSubscription(models.Model):
                 if sale_subscription.product_id.is_licence:
                     self.env['product.licence'].create({
                         'product_id': sale_subscription.product_id.id,
-                        'quantity': sale_subscription.quantity.float,
+                        'quantity': sale_subscription.quantity,
                     })
 
 #Creation d'abonnement comportant des licences + transfert d'informations dans mon tableau des le changement d'etat de
