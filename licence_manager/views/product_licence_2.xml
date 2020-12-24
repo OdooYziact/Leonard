@@ -28,3 +28,5 @@
               sequence="10"
               groups="stock.group_stock_user"/>
 </odoo>
+
+#affichage de mon tableau + menu deroulant

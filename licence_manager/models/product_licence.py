@@ -13,3 +13,12 @@ class ProductLicence(models.Model):
                                    readonly=True)
     quantity = fields.Integer(string="Quantity", readonly=False)
     an_str = fields.Char(compute="_compute_an_str")
+
+#Declaration des champs utilise pour les licences. (informations a affichers dans le tableau)
+
+
+
+#######################################################################################################################
+#######PARTIE MODIFICATION DU CAMPS QUANTITEE DANS LE TABLEAU, devra se repercuter dans les lignes d'abo !!! #########
+#A faire : modif, voir pour la suppr (qui est en realite de l'archivage) et penser a l'historique
+#IMPORTANT : Il faut hérité les fonction associé et venir le renseigner dans ta nouvelle table historique.
