@@ -14,12 +14,11 @@ class SaleSubscription(models.Model):
                 if sale_subscription.product_id.is_licence:
                     self.env['product.licence'].create({
                         'product_id': sale_subscription.product_id.id,
-                        'customer_id': sale_subscription.company_id.id,
+                        'partner_id': sale_subscription.partner_id.id,
                         'quantity': sale_subscription.quantity,
                     })
 
 
-#Dans le for, customer_id est en realite parner_id qui se voit recuperer un id via company_id.
 #Creation d'abonnement comportant des licences + transfert d'informations dans mon tableau des le changement d'etat de
 # l'abonnement (onchange stage_id =2)
 #Observation : si dans les abonnement je decale tout dans "closed" cela ne se repercute pas dans mon tableau,

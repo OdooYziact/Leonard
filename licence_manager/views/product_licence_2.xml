@@ -5,7 +5,7 @@
         <field name="arch" type="xml">
             <tree create="0" string="PRODUCTS">
                 <field name="product_id"/>
-                <field name="customer_id"/>
+                <field name="partner_id"/>
                 <field name="editor_id"/>
                 <field name="provider_id"/>
                 <field name="quantity"/>
