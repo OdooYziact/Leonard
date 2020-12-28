@@ -14,6 +14,7 @@
             <xpath expr="//field[@name='barcode']" position="after">
                 <div>
                     <field name="editor_id"/>
+                    <label for="editor_id"/>
                 </div>
             </xpath>
         </field>
