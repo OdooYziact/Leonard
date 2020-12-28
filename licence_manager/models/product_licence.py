@@ -13,6 +13,8 @@ class ProductLicence(models.Model):
     quantity = fields.Integer(string="Quantity", readonly=False)
     an_str = fields.Char(compute="_compute_an_str")
 
+
+
 #Declaration des champs utilise pour les licences. (informations a affichers dans le tableau)
 
 

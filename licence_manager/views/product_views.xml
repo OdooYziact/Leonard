@@ -11,6 +11,12 @@
                     <label for="is_licence"/>
                 </div>
             </xpath>
+             <xpath expr="//div[@name='options']" position="inside">
+                <div>
+                    <field name="editor_id"/>
+                    <label for="editor_id"/>
+                </div>
+            </xpath>
         </field>
     </record>
 
