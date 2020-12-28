@@ -5,4 +5,4 @@ class ProductProduct(models.Model):
     _inherit = 'product.product'
 
     is_licence = fields.Boolean(related='product_tmpl_id.is_licence')
-    editor_id = fields.Integer(related='product_tmpl_id.editor_id')
+    editor_id = fields.Many2one(related='product_tmpl_id.editor_id')
