@@ -11,7 +11,7 @@
                     <label for="is_licence"/>
                 </div>
             </xpath>
-            <xpath expr="//page/field[@name='barcode']" position="after">
+            <xpath expr="//page/div[@name='barcode']" position="after">
                 <div>
                     <field name="editor_id"/>
                     <label for="editor_id"/>
