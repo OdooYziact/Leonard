@@ -10,7 +10,7 @@
                     <label for="is_licence"/>
                 </div>
             </xpath>
-            <xpath expr="//field[@name='barcode']" position="before">
+            <xpath expr="//field[@name='type']" position="before">
                 <div>
                     <label for="editor_id" class='font-weight-bold'/>
                     <field name="editor_id" class='font-weight-bold'/> <!-- pour l'instant il affiche l'id et non le nom de l'editeur -->
