@@ -14,8 +14,8 @@ class SaleSubscription(models.Model):
                 if sale_subscription.product_id.is_licence:
                     self.env['product.licence'].create({
                         'product_id': sale_subscription.product_id.id,
-                        'partner_id': self.res.partner_id.id,
-                        #'editor_id': self.editor_id.id, editeur present dans fiche produit mais pas dans la subscription_line
+                        'partner_id': self.partner_id.id,
+                        'editor_id': self.res.editor_id.id,
                         'quantity': sale_subscription.quantity,
                     })
 
