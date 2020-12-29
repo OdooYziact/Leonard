@@ -6,8 +6,12 @@
         <field name="arch" type="xml">
             <xpath expr="//div[@name='options']" position="inside">
                 <div>
-                    <field name="is_licence"/>
-                    <label for="is_licence"/>
+                    <group>
+                        <field name="is_licence"/>
+                    </group>
+                    <group>
+                        <label for="is_licence"/>
+                    </group>
                 </div>
             </xpath>
             <xpath expr="//field[@name='type']" position="before">
