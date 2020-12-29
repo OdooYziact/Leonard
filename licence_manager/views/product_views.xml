@@ -12,7 +12,7 @@
             </xpath>
             <xpath expr="//field[@name='type']" position="before">
                 <div>
-                    <label for="editor_id" class='font-weight-bold' attrs="{'invisible':[('is_licence', '!=', True)]}"/>
+                    <label for="editor_id" class='font-weight-bold' attrs="{'invisible':[('is_licence', '!=', True)]}" widget="many2one"/>
                     <field name="editor_id" class='font-weight-bold' attrs="{'invisible':[('is_licence', '!=', True)]}" widget="many2one"/> <!-- pour l'instant il affiche l'id et non le nom de l'editeur -->
                 </div>
             </xpath>
