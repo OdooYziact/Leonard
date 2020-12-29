@@ -6,18 +6,18 @@
         <field name="arch" type="xml">
             <xpath expr="//div[@name='options']" position="inside">
                 <div>
-                    <group>
-                        <field name="is_licence"/>
-                    </group>
-                    <group>
-                        <label for="is_licence"/>
-                    </group>
+                    <field name="is_licence"/>
+                    <label for="is_licence"/>
                 </div>
             </xpath>
             <xpath expr="//field[@name='type']" position="before">
                 <div>
-                    <label for="editor_id" class='font-weight-bold' attrs="{'invisible':[('is_licence', '!=', True)]}"/>
-                    <field name="editor_id" class='font-weight-bold' attrs="{'invisible':[('is_licence', '!=', True)]}"/> <!-- pour l'instant il affiche l'id et non le nom de l'editeur -->
+                    <group>
+                        <label for="editor_id" class='font-weight-bold' attrs="{'invisible':[('is_licence', '!=', True)]}"/>
+                    </group>
+                    <group>
+                        <field name="editor_id" class='font-weight-bold' attrs="{'invisible':[('is_licence', '!=', True)]}"/>
+                    </group>
                 </div>
             </xpath>
         </field>
