@@ -11,10 +11,10 @@
                 </div>
             </xpath>
             <xpath expr="//field[@name='type']" position="before">
-                <div>
+                <group name="group_general">
                     <label for="editor_id" class='font-weight-bold' attrs="{'invisible':[('is_licence', '!=', True)]}"/>
                     <field name="editor_id" class='font-weight-bold' attrs="{'invisible':[('is_licence', '!=', True)]}"/>
-                </div>
+                </group>
             </xpath>
         </field>
     </record>
