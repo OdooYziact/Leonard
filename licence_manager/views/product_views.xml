@@ -12,10 +12,12 @@
             </xpath>
             <xpath expr="//field[@name='type']" position="before">
                 <div>
-                    <group name="product.group_product_variant">
+                    <group>
                         <label for="editor_id" class='font-weight-bold' attrs="{'invisible':[('is_licence', '!=', True)]}"/>
                     </group>
-                    <field name="editor_id" class='font-weight-bold' attrs="{'invisible':[('is_licence', '!=', True)]}"/> <!-- pour l'instant il affiche l'id et non le nom de l'editeur -->
+                    <group>
+                       <field name="editor_id" class='font-weight-bold' attrs="{'invisible':[('is_licence', '!=', True)]}"/>
+                    </group>
                 </div>
             </xpath>
         </field>
@@ -26,5 +28,4 @@
 
 
 
-<!-- ajout de editor_id dans contact ?????? -->
 <!-- faire des groupes pour le editor-->
