@@ -15,7 +15,7 @@ class SaleSubscription(models.Model):
                     self.env['product.licence'].create({
                         'product_id': sale_subscription.product_id.id,
                         'partner_id': self.partner_id.id,
-                        'editor_id': sale_subscription.product_id.editor_id,
+                        'editor_id': sale_subscription.is_licence.editor_id,
                         'quantity': sale_subscription.quantity,
                     })
 
