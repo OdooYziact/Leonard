@@ -13,9 +13,6 @@
             <xpath expr="//field[@name='type']" position="before">
                 <div>
                     <group>
-                        <label for="editor_id" class='font-weight-bold' attrs="{'invisible':[('is_licence', '!=', True)]}"/>
-                    </group>
-                    <group>
                        <field name="editor_id" class='font-weight-bold' attrs="{'invisible':[('is_licence', '!=', True)]}"/>
                     </group>
                 </div>
