@@ -5,7 +5,7 @@ _logger = logging.getLogger(__name__)
 
 
 class SaleSubscription(models.Model):
-    _inherit = 'sale.subscription'
+    _inherit = ['sale.subscription', 'product.product']
 
     @api.onchange('stage_id')
     def onchange_check_is_licence(self):
