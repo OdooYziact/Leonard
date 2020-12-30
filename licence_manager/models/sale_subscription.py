@@ -5,17 +5,17 @@ _logger = logging.getLogger(__name__)
 
 
 class SaleSubscription(models.Model):
-    _inherits = ['sale.subscription', 'product.product']
+    _inherits = ['sale.subscription', 'product.licence']
 
     @api.onchange('stage_id')
     def onchange_check_is_licence(self):
         if self.stage_id.id == 2:
-            for sale_subscription, product_product in self.recurring_invoice_line_ids:
+            for sale_subscription, product_licence in self.recurring_invoice_line_ids:
                 if sale_subscription.product_id.is_licence:
                     self.env['product.licence'].create({
                         'product_id': sale_subscription.product_id.id,
                         'partner_id': self.partner_id.id,
-                        'editor_id': product_product.editor_id.id,
+                        'editor_id': product_licence.editor_id.id,
                         'quantity': sale_subscription.quantity,
                     })
 
