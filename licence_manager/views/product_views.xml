@@ -12,7 +12,9 @@
             </xpath>
             <xpath expr="//field[@name='type']" position="before">
                 <div>
-                    <label for="editor_id" class='font-weight-bold' attrs="{'invisible':[('is_licence', '!=', True)]}"/>
+                    <group name="product.group_product_variant">
+                        <label for="editor_id" class='font-weight-bold' attrs="{'invisible':[('is_licence', '!=', True)]}"/>
+                    </group>
                     <field name="editor_id" class='font-weight-bold' attrs="{'invisible':[('is_licence', '!=', True)]}"/> <!-- pour l'instant il affiche l'id et non le nom de l'editeur -->
                 </div>
             </xpath>
