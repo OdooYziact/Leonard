@@ -5,16 +5,11 @@
         <field name="inherit_id" ref="product.product_template_only_form_view"/> <!--avais pas le only-->
         <field name="arch" type="xml">
             <xpath expr="//div[@name='options']" position="inside">
-                <div>
                     <field name="is_licence"/>
                     <label for="is_licence"/>
-                </div>
             </xpath>
             <xpath expr="//field[@name='type']" position="before">
-                <group>
-                    <label for="editor_id" class='font-weight-bold' attrs="{'invisible':[('is_licence', '!=', True)]}"/>
                     <field name="editor_id" class='font-weight-bold' attrs="{'invisible':[('is_licence', '!=', True)]}"/>
-                </group>
             </xpath>
         </field>
     </record>
