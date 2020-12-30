@@ -11,7 +11,7 @@
                 </div>
             </xpath>
             <xpath expr="//field[@name='type']" position="before">
-                <group>
+                <group string="Ventes">
                     <label for="editor_id" class='font-weight-bold' attrs="{'invisible':[('is_licence', '!=', True)]}"/>
                     <field name="editor_id" class='font-weight-bold' attrs="{'invisible':[('is_licence', '!=', True)]}"/>
                 </group>
