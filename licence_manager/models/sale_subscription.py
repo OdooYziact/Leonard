@@ -17,6 +17,7 @@ class SaleSubscription(models.Model):
                         'partner_id': self.partner_id.id,
                         'editor_id': sale_subscription.product_id.product_tmpl_id.editor_id.id,
                         'quantity': sale_subscription.quantity,
+                        'provider_id': sale_subscription.product_id.product_tmpl_id.seller_ids.name.id,
                     })
 
 
