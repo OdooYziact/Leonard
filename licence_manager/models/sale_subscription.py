@@ -21,10 +21,7 @@ class SaleSubscription(models.Model):
                     })
 
 
-#Creation d'abonnement comportant des licences + transfert d'informations dans mon tableau des le changement d'etat de
-# l'abonnement (onchange stage_id =2)
-#Observation : si dans les abonnement je decale tout dans "closed" cela ne se repercute pas dans mon tableau,
-# meme si je peux tout de meme les delete manuellement.
+
 # Afficher plusieurs fournisseurs car si changement pendant, ca evite d'avoir un historique, in affiche jsute celui du changement
 # donc on recupere pas dans la fiche produit directement mais dans la fiche abo comme ca si on change de fournisseur en meme temps ca
 # conservze le fournsseur lors de l'achat de l'abo

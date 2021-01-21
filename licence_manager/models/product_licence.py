@@ -20,6 +20,6 @@ class ProductLicence(models.Model):
 
 
 #######################################################################################################################
-#######PARTIE MODIFICATION DU CAMPS QUANTITEE DANS LE TABLEAU, devra se repercuter dans les lignes d'abo !!! #########
+#######PARTIE MODIFICATION DU CHAMPS QUANTITEE DANS LE TABLEAU, devra se repercuter dans les lignes d'abo !!! #########
 #A faire : modif, voir pour la suppr (qui est en realite de l'archivage) et penser a l'historique
 #IMPORTANT : Il faut hérité les fonction associé et venir le renseigner dans ta nouvelle table historique.
