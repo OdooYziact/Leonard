@@ -5,6 +5,7 @@ class ProductLicence(models.Model):
     _name = "product.licence"
     _description = "Product Licence"
 
+    subscription_line_id = fields.Many2one(comodel_name='sale.subscription.line')
     product_id = fields.Many2one(string="Licence", comodel_name='product.product', readonly=True)
     partner_id = fields.Many2one(string="Partner", comodel_name='res.partner', readonly=True)
     editor_id = fields.Many2one(string="Editor", comodel_name='res.partner', readonly=True)
