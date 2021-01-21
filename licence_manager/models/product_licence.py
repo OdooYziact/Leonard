@@ -11,7 +11,7 @@ class ProductLicence(models.Model):
     provider_id = fields.Many2many(string="Provider", comodel_name='res.partner', relation='partner_licence_rel',
                                    readonly=True)
     quantity = fields.Integer(string="Quantity", readonly=False)
-    an_str = fields.Char(compute="_compute_an_str")
+
 
 
 
