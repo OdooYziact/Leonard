@@ -9,7 +9,7 @@ class ProductLicence(models.Model):
     partner_id = fields.Many2one(string="Partner", comodel_name='res.partner', readonly=True)
     editor_id = fields.Many2one(string="Editor", comodel_name='res.partner', readonly=True)
     provider_ids = fields.Many2many(string="Provider", comodel_name='res.partner', relation='partner_licence_rel',
-                                   readonly=True)
+                                    readonly=True)
     quantity = fields.Integer(string="Quantity", readonly=False)
 
 
