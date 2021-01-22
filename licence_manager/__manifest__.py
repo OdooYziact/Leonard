@@ -25,7 +25,8 @@
         'product',
         'stock',
         'sale_subscription',
-        'purchase'
+        'purchase',
+        'account'
     ],
 
     # always loaded
