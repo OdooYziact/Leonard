@@ -1,4 +1,4 @@
-from odoo import fields, models
+from odoo import api, models, fields
 
 
 class ProductLicence(models.Model):
@@ -12,6 +12,12 @@ class ProductLicence(models.Model):
     provider_ids = fields.Many2many(string="Provider", comodel_name='res.partner', relation='partner_licence_rel',
                                     readonly=True)
     quantity = fields.Integer(string="Quantity", readonly=False)
+
+    @api.onchange('quantity')
+    def onchange_licence_qty(self):
+        self.subscription_line_id.quantity = self.product_licence.quantity,
+
+
 
 
 
