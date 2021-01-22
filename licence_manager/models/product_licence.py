@@ -17,7 +17,7 @@ class ProductLicence(models.Model):
     def onchange_licence_qty(self):
         for licence in self:
             print('&'*12, licence.quantity)
-            licence.subscription_line_id.update({'quantity': licence.quantity}),
+            licence.subscription_line_id.write({'quantity': licence.quantity}),
 
 
 
