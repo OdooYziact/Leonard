@@ -15,6 +15,7 @@ class ProductLicence(models.Model):
 
     @api.onchange('quantity')
     def onchange_licence_qty(self):
+        print(self.quantity)
         self.subscription_line_id.quantity = self.quantity,
 
 
