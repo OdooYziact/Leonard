@@ -14,7 +14,7 @@ class SaleSubscription(models.Model):
                 if line_subscription.product_id.is_licence:
                     self.env['product.licence'].create({
                         # 'subscription_line_id': line_subscription.id,
-                        'subscription_line_id': line_subscription._origin,
+                        'subscription_line_id': line_subscription._origin.id,
                         'product_id': line_subscription.product_id.id,
                         'partner_id': self.partner_id.id,
                         'editor_id': line_subscription.product_id.product_tmpl_id.editor_id.id,
