@@ -17,7 +17,7 @@ class SaleSubscription(models.Model):
                         'product_id': line_subscription.product_id.id,
                         'partner_id': self.partner_id.id,
                         'editor_id': line_subscription.product_id.product_tmpl_id.editor_id.id,
-                        'quantity': line_subscription.quantity,
+                        'quantity': line_subscription.quantity.float,
                         'provider_ids': [(6, False, line_subscription.product_id.product_tmpl_id.seller_ids.mapped('name').ids)],
                     })
                     line_subscription.licence_id = licence_id.id
