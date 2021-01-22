@@ -11,7 +11,7 @@ class ProductLicence(models.Model):
     editor_id = fields.Many2one(string="Editor", comodel_name='res.partner', readonly=True)
     provider_ids = fields.Many2many(string="Provider", comodel_name='res.partner', relation='partner_licence_rel',
                                     readonly=True)
-    quantity = fields.Integer(string="Quantity", readonly=False)
+    quantity = fields.Float(string="Quantity", readonly=False)
 
     @api.onchange('quantity')
     def onchange_licence_qty(self):
