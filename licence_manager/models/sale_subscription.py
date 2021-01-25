@@ -22,15 +22,6 @@ class SaleSubscription(models.Model):
                     })
                     line_subscription.licence_id = licence_id.id
 
-# Afficher plusieurs fournisseurs car si changement pendant, ca evite d'avoir un historique, in affiche jsute celui du changement
-# donc on recupere pas dans la fiche produit directement mais dans la fiche abo comme ca si on change de fournisseur en meme temps ca
-# conservze le fournsseur lors de l'achat de l'abo
-#STATUS : actif, inactif, actif a renouveller manuellement, actif va etre renouvellé, ?
-#
-#
-#Dupliquer le code onchange stage id 2 et le modif pour stage id 1,3,4, etc afin de supp (archiver), mettre en prépa, etc...
-#Utiliser l'id de la subscription line dans le tableau mais sans l'afficher
-
 
 class SaleSubscriptionLine(models.Model):
     _inherit = 'sale.subscription.line'

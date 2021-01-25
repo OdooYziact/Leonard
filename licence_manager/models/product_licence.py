@@ -13,23 +13,22 @@ class ProductLicence(models.Model):
                                     readonly=True)
     quantity = fields.Float(string="Quantity", readonly=False)
 
+    # @api.onchange('quantity')
+    # def onchange_licence_qty(self):
+    #     for licence in self:
+    #         print('&'*12, licence.quantity)
+    #         licence.subscription_line_id.write({'quantity': licence.quantity}),
+
     @api.onchange('quantity')
-    def onchange_licence_qty(self):
-        for licence in self:
-            print('&'*12, licence.quantity)
-            licence.subscription_line_id.write({'quantity': licence.quantity}),
+    def onchange_qty(self):
+        values = self.onchange_qty_values.values(self.quantity)
+        self.update(values)
 
+    def onchange_qty_values(self, values):
+        values = {
+            'quantity': values['quantity'],
+        }
+        return values
 
-
-
-
-#Declaration des champs utilise pour les licences. (informations a affichers dans le tableau)
-
-
-
-#######################################################################################################################
-#######PARTIE MODIFICATION DU CHAMPS QUANTITEE DANS LE TABLEAU, devra se repercuter dans les lignes d'abo !!! #########
-#A faire : modif, voir pour la suppr (qui est en realite de l'archivage) et penser a l'historique
-#IMPORTANT : Il faut hérité les fonction associé et venir le renseigner dans ta nouvelle table historique.
 
 
