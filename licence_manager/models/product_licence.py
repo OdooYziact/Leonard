@@ -26,7 +26,7 @@ class ProductLicence(models.Model):
 
     def onchange_qty_values(self, values):
         values = {
-            'quantity': values['quantity'],
+            'quantity': values,
         }
         return values
 
