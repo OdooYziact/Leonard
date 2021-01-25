@@ -21,7 +21,7 @@ class ProductLicence(models.Model):
 
     @api.onchange('quantity')
     def onchange_qty(self):
-        values = self.onchange_qty_values.values(self.quantity)
+        values = self.onchange_qty_values(self.quantity)
         self.update(values)
 
     def onchange_qty_values(self, values):
