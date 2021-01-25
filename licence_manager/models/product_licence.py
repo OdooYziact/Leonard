@@ -21,5 +21,6 @@ class ProductLicence(models.Model):
 
     @api.onchange('quantity')
     def onchange_qty(self):
-        self.subscription_line_id.update({'quantity': self.quantity})
+        for licence in self:
+            licence.subscription_line_id.update({'quantity': self.quantity})
 
