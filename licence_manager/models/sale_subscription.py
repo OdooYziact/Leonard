@@ -25,7 +25,7 @@ class SaleSubscription(models.Model):
             for line_subscription in self.recurring_invoice_line_ids:
                 if line_subscription.product_id.is_licence:
                     licence_id = self.env['product.licence'].unlink({
-                        'subscription_line_id': line_subscription._origin.id,
+                        'subscription_line_id'
                     })
                     line_subscription.licence_id = licence_id.id
 
