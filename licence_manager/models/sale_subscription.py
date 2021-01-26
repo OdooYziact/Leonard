@@ -26,4 +26,4 @@ class SaleSubscription(models.Model):
 class SaleSubscriptionLine(models.Model):
     _inherit = 'sale.subscription.line'
 
-    licence_id = fields.Many2one(comodel_name='product.licence')
+    licence_id = fields.Many2one(comodel_name='product.licence', invisible="1")
