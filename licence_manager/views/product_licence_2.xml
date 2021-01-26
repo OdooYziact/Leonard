@@ -30,6 +30,6 @@
               sequence="10"
               groups="stock.group_stock_user"/>
 
-    <field name="licence_id" invisible="1"></field>
+    <!--><field name="licence_id" invisible="1"></field>-->
 </odoo>
 
