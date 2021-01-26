@@ -6,3 +6,5 @@ class ProductProduct(models.Model):
 
     is_licence = fields.Boolean(related='product_tmpl_id.is_licence')
     editor_id = fields.Many2one(comodel_name='res.partner')
+
+

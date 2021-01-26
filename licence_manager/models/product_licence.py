@@ -13,14 +13,7 @@ class ProductLicence(models.Model):
                                     readonly=True)
     quantity = fields.Float(string="Quantity", readonly=False)
 
-    # @api.onchange('quantity')
-    # def onchange_licence_qty(self):
-    #     for licence in self:
-    #         print('&'*12, licence.quantity)
-    #         licence.subscription_line_id.write({'quantity': licence.quantity}),
-
     @api.onchange('quantity')
     def onchange_qty(self):
         for licence in self:
             licence.subscription_line_id.update({'quantity': self.quantity})
-
