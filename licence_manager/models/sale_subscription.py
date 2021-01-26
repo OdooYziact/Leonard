@@ -22,7 +22,6 @@ class SaleSubscription(models.Model):
                     })
                     line_subscription.licence_id = licence_id.id
 
-    @api.onchange('stage_id')
     def onchange_check_is_licence_dead(self):
         if self.stage_id.id == 3:
             for line_subscription in self.recurring_invoice_line_ids:
