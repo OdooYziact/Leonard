@@ -23,6 +23,8 @@ class SaleSubscription(models.Model):
                     line_subscription.licence_id = licence_id.id
 
 
+
+
    # def onchange_delete(self):
    #     if self.stage_id.id == 3:
    #         for line_subscription in self.recurring_invoice_line_ids:
