@@ -20,7 +20,11 @@ class SaleSubscription(models.Model):
                         'provider_ids': [(6, False, line_subscription.product_id.product_tmpl_id.seller_ids.mapped('name').ids)],
                     })
                     line_subscription.licence_id = licence_id.id
-
+        elif self.stage_id.id == 3:
+            for line_subscription in self.recurring_invoice_line_ids:
+                if line_subscription.product_id.is_licence:
+                    licence_id = self.env['product.licence'].unlink()
+                    line_subscription.licence_id = licence_id.id
 
 class SaleSubscriptionLine(models.Model):
     _inherit = 'sale.subscription.line'
