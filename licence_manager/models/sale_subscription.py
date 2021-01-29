@@ -28,3 +28,7 @@ class SaleSubscriptionLine(models.Model):
 
 #stage_id , elif stage 3 ?  stage id + 1 ?
 #unlink() ? (create)
+
+#@api.onchange('stage_id')
+#def _onchange_stage_id(self):
+#    if self.stage_id and self.stage_id.name == 'To Upsell':
