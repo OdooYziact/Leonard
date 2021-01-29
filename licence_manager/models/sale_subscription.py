@@ -26,5 +26,5 @@ class SaleSubscriptionLine(models.Model):
 
     licence_id = fields.Many2one(comodel_name='product.licence')
 
-#stage_id , elif stage 3 ?
+#stage_id , elif stage 3 ?  stage id + 1 ?
 #unlink() ? (create)
