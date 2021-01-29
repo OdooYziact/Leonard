@@ -26,9 +26,11 @@ class SaleSubscriptionLine(models.Model):
 
     licence_id = fields.Many2one(comodel_name='product.licence')
 
-#stage_id , elif stage 3 ?  stage id + 1 ?
-#unlink() ? (create)
+
 
 #@api.onchange('stage_id')
 #def _onchange_stage_id(self):
 #    if self.stage_id and self.stage_id.name == 'To Upsell':
+#unlink() ?
+#new_stage id = stage_id.id + 1
+#if self.stage_id.id == 2 and self.new_stage_id.id == 3
