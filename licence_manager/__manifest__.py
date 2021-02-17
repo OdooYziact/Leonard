@@ -36,5 +36,6 @@
         #'views/views.xml',
         #'views/templates.xml',
         'security/ir.model.access.csv',
+        'views/sale_subscription_stage.xml'
     ],
 }

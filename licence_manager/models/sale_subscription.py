@@ -41,4 +41,4 @@ class SaleSubscriptionLine(models.Model):
 class SaleSubsriptionStage(models.Model):
     _inherit = 'sale.subscription.stage'
 
-    status = fields.Selection([('Avant Vente', 'En cour', 'Annulé')])
+    status = fields.Selection([('Avant-Vente', 'En cour', 'Annulé')])
