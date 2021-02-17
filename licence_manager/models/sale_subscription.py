@@ -34,3 +34,6 @@ class SaleSubscriptionLine(models.Model):
 #unlink() ?
 #new_stage id = stage_id.id + 1
 #if self.stage_id.id == 2 and self.new_stage_id.id == 3
+
+
+#track_visibility odoo : history

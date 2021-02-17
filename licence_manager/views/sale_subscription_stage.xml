@@ -1,0 +1,12 @@
+<odoo>
+    <record id="sale_subscription_stage_form_view" model="ir.ui.view">
+        <field name="inherit_id" ref="sale_subscription.sale_subscription_stage_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='in_progress']" position="after">
+                    <field name="status"/>
+                    <label for="_status"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>
+
