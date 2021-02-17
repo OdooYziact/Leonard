@@ -40,7 +40,7 @@ class SaleSubsriptionStage(models.Model):
 
         if self.status == 'in_progress':
 
-            self.in_progress = True
+            self.in_progress = True,
 
         else:
             self.in_progress = False
