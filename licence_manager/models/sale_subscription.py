@@ -38,7 +38,8 @@ class SaleSubscriptionLine(models.Model):
 
 #track_visibility odoo : history
 
-class SaleSubsriptionStage(models.Model):
-    _inherit = 'sale.subscription.stage'
 
-    status = fields.Selection([('av', 'Avant-Vente'), ('en', 'En cour'), ('supp', 'Annulé')])
+#class SaleSubsriptionStage(models.Model):
+#    _inherit = 'sale.subscription.stage'
+#
+#    status = fields.Selection([('av', 'Avant-Vente'), ('en', 'En cour'), ('supp', 'Annulé')])
