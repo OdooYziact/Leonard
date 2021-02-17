@@ -17,9 +17,11 @@ class SaleSubscription(models.Model):
                         'partner_id': self.partner_id.id,
                         'editor_id': line_subscription.product_id.product_tmpl_id.editor_id.id,
                         'quantity': line_subscription.quantity,
-                        'provider_ids': [(6, False, line_subscription.product_id.product_tmpl_id.seller_ids.mapped('name').ids)], #a deplacer dans product licence (related)
+                        'provider_ids': [(6, False, line_subscription.product_id.product_tmpl_id
+                                          .seller_ids.mapped('name').ids)], #a deplacer dans product licence (related)
                     })
                     line_subscription.licence_id = licence_id.id
+
 
 class SaleSubscriptionLine(models.Model):
     _inherit = 'sale.subscription.line'
@@ -27,17 +29,18 @@ class SaleSubscriptionLine(models.Model):
     licence_id = fields.Many2one(comodel_name='product.licence')
 
 
-
-    #@api.onchange('stage_id')
-    #def _onchange_stage_id(self):
-    #    if self.stage_id and self.stage_id.name == 'To Upsell':
-    #unlink() ?
-    #new_stage id = stage_id.id + 1
-    #if self.stage_id.id == 2 and self.new_stage_id.id == 3
-    #track_visibility odoo : history
-
-
 class SaleSubsriptionStage(models.Model):
     _inherit = 'sale.subscription.stage'
 
-    status = fields.Selection([('av', 'Avant-Vente'), ('en', 'En cour'), ('supp', 'Annulé')], required=True)
+    status = fields.Selection([('pre_sale', 'Pre-Sale'), ('in_progress', 'In Progress'), ('canceled', 'Canceled')],
+                              required=True)
+
+    @api.depends('sale_subscription_stage')
+    def change_status(self):
+
+        if self.status == 'in_progress':
+
+            self.in_progress = True
+
+        else:
+            self.in_progress = False
