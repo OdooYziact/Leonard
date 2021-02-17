@@ -4,8 +4,7 @@
         <field name="inherit_id" ref="sale_subscription.sale_subscription_stage_view_form"/>
         <field name="arch" type="xml">
             <xpath expr="//field[@name='rating_template_id']" position="after">
-                    <field name="status" widget="selection"/>
-                    <label for="status" />
+                    <field label="status" widget="selection"/>
             </xpath>
         </field>
     </record>
