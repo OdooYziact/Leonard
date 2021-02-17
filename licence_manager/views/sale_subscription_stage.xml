@@ -4,9 +4,10 @@
         <field name="model">sale.subscription.stage</field>
         <field name="inherit_id" ref="sale_subscription.sale_subscription_stage_view_form"/>
         <field name="arch" type="xml">
-            <xpath expr="//field[@name='in_progress']" position="after">
+            <xpath expr="//field[@name='rating_template_id']" position="after">
+                    <field name="name"/>
+                    <field name="sequence" groups="base.group_no_one"/>
                     <field name="status"/>
-                    <label for="_status"/>
             </xpath>
         </field>
     </record>
