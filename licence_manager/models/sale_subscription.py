@@ -28,18 +28,18 @@ class SaleSubscriptionLine(models.Model):
 
 
 
-#@api.onchange('stage_id')
-#def _onchange_stage_id(self):
-#    if self.stage_id and self.stage_id.name == 'To Upsell':
-#unlink() ?
-#new_stage id = stage_id.id + 1
-#if self.stage_id.id == 2 and self.new_stage_id.id == 3
+    #@api.onchange('stage_id')
+    #def _onchange_stage_id(self):
+    #    if self.stage_id and self.stage_id.name == 'To Upsell':
+    #unlink() ?
+    #new_stage id = stage_id.id + 1
+    #if self.stage_id.id == 2 and self.new_stage_id.id == 3
 
 
-#track_visibility odoo : history
+    #track_visibility odoo : history
 
 
-#class SaleSubsriptionStage(models.Model):
-#    _inherit = 'sale.subscription.stage'
-#
-#    status = fields.Selection([('av', 'Avant-Vente'), ('en', 'En cour'), ('supp', 'Annulé')])
+class SaleSubsriptionStage(models.Model):
+    _inherit = 'sale.subscription.stage'
+
+    status = fields.Selection([('av', 'Avant-Vente'), ('en', 'En cour'), ('supp', 'Annulé')])
